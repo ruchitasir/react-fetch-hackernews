@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AppFun from './AppFun';
+import AppClass from './AppClass';
 import * as serviceWorker from './serviceWorker';
+const DEFAULT_NAME = 'Hacker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppClass name={DEFAULT_NAME}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

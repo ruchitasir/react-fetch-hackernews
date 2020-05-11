@@ -7,7 +7,7 @@ const API_URL = 'http://hn.algolia.com/api/v1/search?query='
 const DEFAULT_QUERY = 'react'
 const DEFAULT_NAME = 'Ruchita'
 
-function App() {
+function AppFun() {
   // State variables
   let [data, setData] = useState({hits: []})
   let [name,setName] = useState(DEFAULT_NAME)
@@ -22,12 +22,14 @@ function App() {
     useEffect(()=>{
       console.log('query has changed',query)
     // Fetch 
-    /* fetch(API_URL+query)
+    /* 
+    fetch(API_URL+query)
     .then(response=>response.json())
     .then(results=>{
       console.log(results.hits)
       setData({hits: results.hits})
-    }) */
+    }) 
+    */
     
     // Axios version
      const getData = async()=>{
@@ -95,4 +97,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppFun;
